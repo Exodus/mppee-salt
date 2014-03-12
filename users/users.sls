@@ -34,3 +34,31 @@ p7zip-full:
 rsync:
   pkg:
     - installed
+
+icedtea-plugin: 
+  pkg:
+    - installed 
+
+flashplugin-nonfree:
+  pkg: 
+    - installed 
+
+smplayer: 
+  pkg: 
+    - installed 
+
+nautilis-image-converter: 
+  pkg: 
+    - installed 
+
+system-config-printer: 
+  pkg: 
+    - installed 
+
+openprinting-ppds: 
+  pkg: 
+    - installed 
+
+foomatic-db-compressed-ppds: 
+  pkg: 
+    - installed
