@@ -1,6 +1,6 @@
 #!/bin/bash
 #$proxy es el proxy que tenga el sistema, si no tiene dejalo vacio
-#proxy="http://10.201.1.2:8080"
+proxy="http://10.201.1.2:8080"
 
 #Root check
 if [[ $EUID -ne 0 ]]; then
