@@ -48,7 +48,7 @@ smplayer:
   pkg: 
     - installed 
 
-nautilis-image-converter: 
+nautilus-image-converter: 
   pkg: 
     - installed 
 
