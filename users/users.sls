@@ -14,7 +14,7 @@ salt-minion:
   service.running:
     - watch:
       - file: /etc/lsb-release
-      -reload_modules: true
+      - reload_modules: true
 
 vim:
   pkg:
