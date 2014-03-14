@@ -1,3 +1,12 @@
+base:
+  pkgrepo.managed:
+    - name: deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Debian_7.0/ /
+    - dist: wheezy
+    - file: /etc/apt/sources.list.d/owncloud.list
+    - key_url: http://download.opensuse.org/repositories/isv:ownCloud:desktop/Debian_7.0/Release.key
+    - require_in:
+      - pkg: owncloud-client
+
 /etc/apt/apt.conf.d/proxy:
   file.managed:
     - user: root
@@ -9,6 +18,12 @@
   file.managed:
     - source: salt://users/files/lsb-release
 
+/etc/apt/sources.list.d/owncloud.list:
+  file.managed:
+    - users: root
+    - group: root
+    - mode: 644
+    - source: salt://users/files/owncloud.list
 
 salt-minion:
   service.running:
@@ -62,4 +77,8 @@ openprinting-ppds:
 
 foomatic-db-compressed-ppds: 
   pkg: 
+    - installed
+
+owncloud-client:
+  pkg:
     - installed
