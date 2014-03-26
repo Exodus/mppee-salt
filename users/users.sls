@@ -25,6 +25,20 @@ base:
     - mode: 644
     - source: salt://users/files/owncloud.list
 
+/etc/cups/printers.conf: 
+  file.managed: 
+    - users: root 
+    - group: root 
+    - mode: 644 
+    - source: salt://users/files/fisc/printers.list 
+
+/etc/cups/cupsd.conf: 
+  file.managed: 
+    - users: root 
+    - group: root 
+    - mode: 644 
+    - source: salt://users/files/fisc/confcup
+
 salt-minion:
   service.running:
     - watch:
