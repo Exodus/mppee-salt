@@ -25,19 +25,19 @@ base:
     - mode: 644
     - source: salt://users/files/owncloud.list
 
-/etc/cups/printers.conf: 
-  file.managed: 
-    - users: root 
-    - group: root 
-    - mode: 644 
-    - source: salt://users/files/fisc/printers.list 
+/etc/cups/printers.conf:
+  file.managed:
+    - users: root
+    - group: root
+    - mode: 644
+    - source: salt://users/files/fisc/printers.conf
 
-/etc/cups/cupsd.conf: 
-  file.managed: 
-    - users: root 
-    - group: root 
-    - mode: 644 
-    - source: salt://users/files/fisc/confcup
+/etc/cups/ppd/X656de.ppd:
+  file.managed:
+    - users: root
+    - group: root
+    - mode: 644
+    - source: salt://users/files/fisc/X656de.ppd
 
 salt-minion:
   service.running:
